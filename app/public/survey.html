@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Friend Finder</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="/css/style.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <div class="text-center jumbotron">
+                    <h1><span class="glyphicon glyphicon-pencil"></span>Friend Finder Survey!</h1>
+                    <hr/>
+                    <h3>Click the button below to fill out a survey and find people with similar opinions to you.</h3>
+                    <a href="/">
+                        <button type="button" class="btn btn-primary btn-lg center">
+                            <span class="glyphicon glyphicon-home"></span>  Home Page
+                        </button>
+                    </a>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name"/>
+                        <br/>
+                        <label for="name">Photo:</label>
+                        <input type="text" class="form-control" id="photo"/>
+                    </div>
+                    <div>
+                        <div class="panel">
+                            <div class="text-center panel-heading"><h4>1: Question 1?</h4></div>
+                            <div class="text-center panel-body">
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q1a1" name="q1" value=1>Strongly Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q1a2" name="q1" value=2>Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q1a3" name="q1" value=3>Neither Agree or Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q1a4" name="q1" value=4>Agree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q1a5" name="q1" value=5>Strongly Agree</label>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="text-center panel-heading"><h4>2: Question 2?</h4></div>
+                            <div class="text-center panel-body">
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q2a1" name="q2" value=1>Strongly Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q2a2" name="q2" value=2>Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q2a3" name="q2" value=3>Neither Agree or Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q2a4" name="q2" value=4>Agree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q2a5" name="q2" value=5>Strongly Agree</label>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="text-center panel-heading"><h4>3: Question 3?</h4></div>
+                            <div class="text-center panel-body">
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q3a1" name="q3" value=1>Strongly Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q3a2" name="q3" value=2>Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q3a3" name="q3" value=3>Neither Agree or Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q3a4" name="q3" value=4>Agree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q3a5" name="q3" value=5>Strongly Agree</label>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="text-center panel-heading"><h4>4: Question 4?</h4></div>
+                            <div class="text-center panel-body">
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q4a1" name="q4" value=1>Strongly Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q4a2" name="q4" value=2>Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q4a3" name="q4" value=3>Neither Agree or Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q4a4" name="q4" value=4>Agree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q4a5" name="q4" value=5>Strongly Agree</label>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="text-center panel-heading"><h4>5: Question 5?</h4></div>
+                            <div class="text-center panel-body">
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q5a1" name="q5" value=1>Strongly Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q5a2" name="q5" value=2>Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q5a3" name="q5" value=3>Neither Agree or Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q5a4" name="q5" value=4>Agree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q5a5" name="q5" value=5>Strongly Agree</label>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="text-center panel-heading"><h4>6: Question 6?</h4></div>
+                            <div class="text-center panel-body">
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q6a1" name="q6" value=1>Strongly Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q6a2" name="q6" value=2>Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q6a3" name="q6" value=3>Neither Agree or Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q6a4" name="q6" value=4>Agree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q6a5" name="q6" value=5>Strongly Agree</label>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="text-center panel-heading"><h4>7: Question 7?</h4></div>
+                            <div class="text-center panel-body">
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q7a1" name="q7" value=1>Strongly Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q7a2" name="q7" value=2>Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q7a3" name="q7" value=3>Neither Agree or Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q7a4" name="q7" value=4>Agree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q7a5" name="q7" value=5>Strongly Agree</label>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="text-center panel-heading"><h4>8: Question 8?</h4></div>
+                            <div class="text-center panel-body">
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q8a1" name="q8" value=1>Strongly Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q8a2" name="q8" value=2>Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q8a3" name="q8" value=3>Neither Agree or Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q8a4" name="q8" value=4>Agree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q8a5" name="q8" value=5>Strongly Agree</label>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="text-center panel-heading"><h4>9: Question 9?</h4></div>
+                            <div class="text-center panel-body">
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q9a1" name="q9" value=1>Strongly Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q9a2" name="q9" value=2>Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q9a3" name="q9" value=3>Neither Agree or Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q9a4" name="q9" value=4>Agree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q9a5" name="q9" value=5>Strongly Agree</label>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="text-center panel-heading"><h4>10: Question 10?</h4></div>
+                            <div class="text-center panel-body">
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q10a1" name="q10" value=1>Strongly Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q10a2" name="q10" value=2>Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q10a3" name="q10" value=3>Neither Agree or Disagree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q10a4" name="q10" value=4>Agree</label>
+                                <label class="radio-inline"><input class="questionAnswer" type="radio" id="q10a5" name="q10" value=5>Strongly Agree</label>
+                            </div>
+                        </div>
+                    </div>
+                    <label id="errorMessage"></label>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+                        <span class="glyphicon glyphicon-ok"></span> Submit Survey
+                    </button>
+                </form>
+            </div>
+            <hr>
+            <footer>
+                <div class="container">
+                    <p>
+                        <a href="/api/friends"> API Friends</a>
+                        |
+                        <a href="https://github.com/mjbelanic/FriendFinder">Friend Finder Github</a>
+                    </p>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript">
+            var responses = [];
+            $("#submit").on("click", function(){
+                event.preventDefault();
+                responses = [];
+                $(".questionAnswer").each(function(){
+                    if($(this).is(':checked')){
+                        responses.push(this.value);
+                    }
+                });
+
+                if(responses.length < 10){
+                    $("#errorMessage").html("You have not answered all questions. Please review your submission.");
+                }
+                else if($("#name").val() === ""){
+                    $("#errorMessage").html("You did not enter your name.")
+                }else{
+                    $("#errorMessage").html("");
+                }
+
+                if($("#errorMessage").html() === ""){
+                    
+                    var userData = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: responses
+                    }
+
+                    var currentURL = window.location.origin;
+
+                    $.post("/api/friends", userData)
+                    .done(function(data){
+
+                        $("#errorMessage").html(data.name);
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

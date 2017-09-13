@@ -1,0 +1,21 @@
+.panel{
+    border: 1px solid black;
+}
+
+.jumbotron{
+    margin-top: 10px;
+    background-color: #000A29;
+}
+
+.panel-heading{
+    background-color: #000A29;
+}
+
+.jumbotron>h1, h1, h3, hr, .panel-heading>h4{
+    color: #2988BC;
+    text-align: center;
+}
+
+#errorMessage{
+    color: red;
+}
