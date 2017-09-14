@@ -181,10 +181,8 @@
 
                     var currentURL = window.location.origin;
 
-                    $.post("/api/friends", userData)
-                    .done(function(data){
-
-                        $("#errorMessage").html(data.name);
+                    $.post(currentURL + "/api/friends", userData, function(data){
+                        $("#errorMessage").html(data);
                     });
                 }
             });
