@@ -11,7 +11,8 @@ module.exports = function(app){
     app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
     app.get("/api/friends", function(req, res) {
-        res.sendFile(path.join(__dirname, "../data/friends.js"));
+        var friends = require("../data/friends.js");
+        res.json(friends);
       });
     
     app.post("/api/friends", function(req,res){
@@ -20,26 +21,37 @@ module.exports = function(app){
             req.body.scores[i] = parseInt(req.body.scores[i]);
             total += parseInt(req.body.scores[i]);
         }
+
         var friends = require("../data/friends.js");
         var bestFriend;
+        var perfectPoints;
+        var perfectScore;
         var closestScore = 50;
+        
         for(var j = 0; j < friends.length; j++){
             var currentScore = 0;
+            perfectPoints = 0;
             for(var k = 0; k < friends[j].scores.length; k++){
                 currentScore += friends[j].scores[k];
-            }
-            if(currentScore > total){
-                currentScore = currentScore - total;
-            }else{
-                currentScore = total - currentScore;
-            }
-            if(currentScore < closestScore){
-                closestScore = currentScore;
-                bestFriend = friends[j];
+                if(parseInt(req.body.scores[k]) === friends[j].scores[k]){
+                    perfectPoints++;
+                }
+                if(perfectPoints === 10){
+                    bestFriend = friends[j];
+                }else{
+                    if(currentScore > total){
+                        currentScore = currentScore - total;
+                    }else{
+                        currentScore = total - currentScore;
+                    }
+                    if(currentScore < closestScore){
+                        closestScore = currentScore;
+                        bestFriend = friends[j];
+                    }
+                }
             }
         }
         friends.push(req.body);
-        console.log(friends);
-        res.send(bestFriend.name);
+        res.send(bestFriend);
     });
 }
