@@ -29,7 +29,7 @@
                         <label for="name">Name:</label>
                         <input type="text" class="form-control" id="name"/>
                         <br/>
-                        <label for="name">Photo:</label>
+                        <label for="photo">Photo:</label>
                         <input type="text" class="form-control" id="photo"/>
                     </div>
                     <div>
@@ -182,8 +182,8 @@
                 if(responses.length < 10){
                     $("#errorMessage").html("You have not answered all questions. Please review your submission.");
                 }
-                else if($("#name").val() === ""){
-                    $("#errorMessage").html("You did not enter your name.")
+                else if($("#name").val() === "" || $("#photo").val() === ""){
+                    $("#errorMessage").html("You did not enter either your name or photo link.")
                 }else{
                     $("#errorMessage").html("");
                 }
